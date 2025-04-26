@@ -1,0 +1,85 @@
+/* Keyframe for fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 255, 255, 0); }
+    50% { transform: scale(1.04); box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
+    100% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 255, 255, 0); }
+  }
+
+  /* Body styling */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("https://images.unsplash.com/photo-1575722290270-626b0208df99?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fHBvcnRmb2xpbyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D");
+    /*background: url("https://img.freepik.com/premium-photo/sun-light-flare_457879-926.jpg?ga=GA1.1.343663292.1745177239&semt=ais_hybrid&w=740") no-repeat center center fixed; */
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in;
+  }
+
+  .container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    max-width: 400px;
+    width: 90%;
+    animation: fadeIn 2s ease-in;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid white;
+    animation: pulse 3s infinite;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin: 10px 0 5px;
+    color: white; /* Pure white */
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ddd;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+
+  .button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.04);
+  }
+
+  .button i {
+    font-size: 20px;
+    width: 25px;
+  }
